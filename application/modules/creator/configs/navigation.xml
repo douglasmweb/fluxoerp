@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configdata>
+    <nav>
+        <index>
+            <label>Home</label>
+            <module>creator</module>
+            <controller>index</controller>
+            <action>index</action>
+            <uri>#</uri>
+        </index>
+        <modulo>
+            <label>Módulos</label>
+            <module>creator</module>
+            <controller>modulo</controller>
+            <action>index</action>
+            <uri>#</uri>
+        </modulo>
+        <controlador>
+            <label>Controladores</label>
+            <module>creator</module>
+            <controller>controlador</controller>
+            <action>index</action>
+            <uri>#</uri>
+        </controlador>
+        <acao>
+            <label>Ações</label>
+            <module>creator</module>
+            <controller>acao</controller>
+            <action>index</action>
+            <uri>#</uri>
+        </acao>
+        <formulario>
+            <label>Formulário</label>
+            <module>creator</module>
+            <controller>formulario</controller>
+            <action>index</action>
+            <uri>#</uri>
+        </formulario>
+    </nav>
+</configdata>

@@ -1,0 +1,49 @@
+<?=$this->doctype();?>
+<html>
+    <head>
+<?
+echo $this->headTitle("..:: O Arquiteto ::..");
+$this->headMeta()->appendHttpEquiv('Content-Type','text/html; charset=UTF-8');
+$this->headMeta()->appendHttpEquiv('Content-Language', 'pt-BR');
+
+$this->headLink()->prependStylesheet('/creator_files/css/form.css');
+$this->headLink()->prependStylesheet('/creator_files/css/style.css');
+$this->headScript()->prependFile("/creator_files/javascript/creator.js");
+
+$this->jQuery()->setLocalPath('/javascript/jquery-1.8.1.js');
+$this->jQuery()->setUiLocalPath('/javascript/jquery-ui-1.8.20.custom.min.js');
+$this->jQuery()->addJavascriptFile('/javascript/prettyphoto/js/jquery.prettyPhoto.js');
+$this->jQuery()->addStylesheet('/javascript/prettyphoto/css/prettyPhoto.css');
+$this->jQuery()->enable();
+$this->jQuery()->uiEnable();
+
+if($this->dojo()->isEnabled()) {
+   $this->dojo()->setLocalPath('/javascript/dojo/dojo/dojo.js')
+          ->addStyleSheetModule('dijit.themes.tundra');
+   echo $this->dojo();
+}
+
+echo $this->headLink();
+echo $this->headMeta();
+echo $this->jQuery();
+echo $this->headScript();
+echo $this->headStyle();
+
+
+?>
+    </head>
+<body class="tundra">
+            
+    <div class="container">
+
+    <?=$this->placeholder('header'); ?>
+    <?=$this->navigation()->menu()->setUlClass('navigation');?>
+        <div class="main-frame">
+            <?=$this->placeholder('Menus');?>
+            <?=$this->placeholder('Links');?>
+            <?=$this->layout()->content;  ?>
+        </div>
+    <?=$this->partial('/partial/_footer.phtml'); ?>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<configdata>
+  <nav>
+    <cadastros>
+      <label>Cadastros</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </cadastros>
+    <transacoes>
+      <label>Transações</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </transacoes>
+    <estoque>
+      <label>Estoque</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </estoque>
+    <fiscal>
+      <label>Fiscal</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </fiscal>
+    <relatorios>
+      <label>Relatórios</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </relatorios>
+    <integracoes>
+      <label>Integrações</label>
+      <uri>#</uri>
+      <pages>as</pages>
+    </integracoes>
+  </nav>
+</configdata>

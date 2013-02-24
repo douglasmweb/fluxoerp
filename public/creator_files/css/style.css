@@ -1,0 +1,45 @@
+body{background: #fff; font-family: Arial; font-size: 12px; margin: 0px; padding: 0px; 
+    background: url('/images/creator/background.jpg') repeat; }
+
+h1,h2,h3,h4,h5{ margin:0px; padding: 0px;}
+
+ul,li{ padding: 0px; margin: 0px; list-style-type:none; }
+a{ color:#66cc00; }
+.navigation li { display: inline-block; }
+.navigation li a { padding: 5px; display: block; background-color: #aeaeae; color: #fff; text-decoration: none; }
+.navigation li a:hover { background-color: #9b9b9b; }
+.container { width: 1000px; margin: 10px auto; background-color: #fff; box-shadow: 0px 0px 18px #ccc; }
+.main-frame { padding: 10px; }
+
+footer { background-color: #555; color: #fff; padding: 8px; text-align: center; }
+
+/* TABELA LISTA */
+
+.TabelaLista { border-collapse: collapse; width: auto; min-width: 980px;}
+.TabelaLista th { font-size: 11px; font-weight: bold; padding: 5px; color: #555; background: #EEE; }
+.TabelaLista td { font-size: 11px; padding: 5px; color: #666; border-bottom: 1px solid #EEEEEE; }
+.TabelaLista tr.odd { background: #FAFAFA; }
+
+.TabelaCabecalho { border-collapse: collapse; width:40%; border:1px solid #CCC;}
+.TabelaCabecalho th { font-size: 11px; font-weight: bold; padding: 5px; color: #555; background: #EEE; }
+.TabelaCabecalho td { font-size: 11px; padding: 5px; color: #666; border-bottom: 1px solid #EEEEEE; }
+.TabelaCabecalho tr.odd { background: #FAFAFA; }
+
+.TabelaLista th a:link,
+.TabelaLista th a:active,
+.TabelaLista th a:visited {	color: #555; text-decoration: none; }
+.TabelaLista th a:hover { color: #777; }
+
+.TabelaLista td a:link,
+.TabelaLista td a:active,
+.TabelaLista td a:visited { color: #808080;	text-decoration: underline; }
+.TabelaLista td a:hover { color: #000; }
+
+.TabelaLista td.actions { width: 1px; border-right: none; white-space: nowrap; }
+.TabelaLista td { border-right: 1px solid #eee; }
+.TabelaLista td.primary_key{ width: 1px; white-space: nowrap; border-right: 1px solid #eee; }
+
+.adicionar { background-color: #ccc; color: #FFF; background: url('/images/creator/add.png') #ccc no-repeat 5px;
+    border-radius: 15px; padding: 5px 10px 5px 25px ; text-decoration: none; display: inline-block; margin: 3px 0px; }
+
+.adicionar:hover { background-color: #aaa; }

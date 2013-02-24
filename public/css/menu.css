@@ -1,0 +1,78 @@
+.menu
+{
+    margin: 1px 0px;
+}
+
+.menu ul
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu ul li
+{
+    display: inline-block;
+    font-family: Calibri;
+    font-size:14px;
+    color: #fff;
+    margin-right: -3px;
+    position: relative;
+}
+
+.menu ul li ul > li
+{
+    margin-top: -1px;
+    border-top: 1px dashed #fff;
+}
+
+.menu ul li ul > li a
+{
+    background-color: #000;
+    opacity: 1;
+}
+
+.menu ul li a
+{
+    background-color: #173683;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px;
+    display: block;
+    padding-top:7px;
+    white-space: nowrap;
+}
+
+.menu ul li ul a
+{
+    width: 100px;
+}
+
+.menu > ul > li > ul {
+	position: absolute;
+	left: 0px;
+    z-index: 9999;
+    margin: 0px;
+    padding: 0px;
+    top:30px;
+    display: none;
+}
+
+.menu ul li a:hover
+{
+    background-color: #3258b8;
+}
+
+.menu ul li ul
+{
+    display: none;
+}
+
+.menu  ul li ul li ul {
+	position: absolute;
+	left: 110px;
+    top: 0px !important;
+    display: none;
+}
+.navigation ul li {
+    position: relative;
+}

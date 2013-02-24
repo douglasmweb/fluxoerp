@@ -1,0 +1,9 @@
+    <div id="header">
+        <h2>Admin Panel</h2>
+        <a href="<?=$this->url(array(
+            'module'=>'admin',
+            'controller'=>'index',
+            'action'=>'logout'
+            ));?>" style="float: right;">Deslogar</a>
+        <?=$this->navigation()->menu()->setUlClass('navigation');?>
+    </div>

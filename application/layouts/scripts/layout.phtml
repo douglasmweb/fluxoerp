@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <title>..:: Fluxo ERP ::..</title>
+<?
+$this->headMeta()->appendHttpEquiv('Content-Type','text/html; charset=UTF-8');
+$this->headMeta()->appendHttpEquiv('Content-Language', 'pt-BR');
+$this->headLink()->prependStylesheet('/css/style.css');
+$this->headLink()->prependStylesheet('/css/menu.css');
+//$this->headLink()->prependStylesheet('/css/slider.css');
+$this->headLink()->headLink(array('rel' => 'icon',
+                              'href' => 'favicon.ico'),
+                              'PREPEND');
+echo $this->headLink();
+echo $this->headMeta();
+echo $this->headScript();
+    echo $this->jQuery()
+    ->setLocalPath('/javascript/jquery-1.8.1.js')
+    ->setUiLocalPath('/javascript/jquery-ui-1.8.20.custom.min.js')
+              ->enable()
+              ->uiEnable();
+?>
+<link rel="shortcut icon" href="/favicon.ico"/>
+<script type="text/javascript" src="/javascript/rainbowvis.js"></script>
+<script type="text/javascript" src="/javascript/menu.js"></script>
+<script>
+$(document).ready(function(){
+    $(".menu ul li").hover(function(){
+        $(this).find(">ul").show('fast');
+    }, function(){
+        $(this).find(">ul").hide('fast');
+    });
+    
+
+});
+</script>
+</head>
+<body>
+    <div class="header">
+        <a href="javascript:void();">
+        <img src="/images/logomarca.png"/>
+        </a>
+    </div>
+    <div class="menu">
+        <?=$this->navigation()->menu()->setUlClass('navigation');?>
+    </div>
+    <div class="content">
+        <?php echo $this->layout()->content; ?>
+    </div>
+</body>
+</html>

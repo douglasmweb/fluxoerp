@@ -1,0 +1,39 @@
+.button
+{
+    background: url('/images/creator/splashy.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px; 
+    margin-top: 0;
+    position: relative;
+    vertical-align: text-top;
+    width: 16px;
+}
+
+.edt
+{
+    background-position: -21px -357px;
+    height: 16px;
+    width: 13px;
+}
+
+.del
+{
+    background-position: -21px -1197px;
+}
+
+.ver
+{
+    background-position: -63px -1512px;
+}
+
+.sync
+{
+    background-position: -63px -546px;
+}
+
+.frm
+{
+    background: url('/images/creator/application_form.png');
+}

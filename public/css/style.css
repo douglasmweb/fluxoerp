@@ -1,0 +1,25 @@
+body
+{
+    font-family: Calibri;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header
+{
+    width: 990px;
+    background-color: #eee;
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    margin: 0px;
+}
+
+
+
+.content
+{
+    width: 990px;
+    background-color: #eee;
+}

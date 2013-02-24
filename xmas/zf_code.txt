@@ -1,0 +1,9 @@
+zf create controller Modulo 1 creator
+zf create controller Controlador 1 creator
+zf create controller Acao 1 creator
+zf create model Modulo creator
+zf create model Controlador creator
+zf create model Acao creator
+zf create form Modulo creator
+zf create form Controlador creator
+zf create form Acao creator

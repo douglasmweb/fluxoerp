@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configdata>
+    <nav>
+        <cadastros>
+            <label>Cadastros</label>
+            <uri>#</uri>
+            <pages>
+ 
+                <page2_1>
+                    <label>Page 2.1</label>
+                    <uri>page2/page2_1</uri>
+                </page2_1>
+ 
+                <page2_2>
+                    <label>Page 2.2</label>
+                    <uri>page2/page2_2</uri>
+                    <pages>
+ 
+                        <page2_2_1>
+                            <label>Page 2.2.1</label>
+                            <uri>page2/page2_2/page2_2_1</uri>
+                        </page2_2_1>
+ 
+                        <page2_2_2>
+                            <label>Page 2.2.2</label>
+                            <uri>page2/page2_2/page2_2_2</uri>
+                            <active>1</active>
+                        </page2_2_2>
+ 
+                    </pages>
+                </page2_2>
+ 
+                <page2_3>
+                    <label>Page 2.3</label>
+                    <uri>page2/page2_3</uri>
+                    <pages>
+ 
+                        <page2_3_1>
+                            <label>Page 2.3.1</label>
+                            <uri>page2/page2_3/page2_3_1</uri>
+                        </page2_3_1>
+ 
+                        <page2_3_2>
+                            <label>Page 2.3.2</label>
+                            <uri>page2/page2_3/page2_3_2</uri>
+                            <visible>0</visible>
+                            <pages>
+ 
+                                    <page2_3_2_1>
+                                        <label>Page 2.3.2.1</label>
+                                        <uri>page2/page2_3/page2_3_2/1</uri>
+                                        <active>1</active>
+                                    </page2_3_2_1>
+ 
+                                    <page2_3_2_2>
+                                        <label>Page 2.3.2.2</label>
+                                        <uri>page2/page2_3/page2_3_2/2</uri>
+                                        <active>1</active>
+ 
+                                        <pages>
+                                            <page_2_3_2_2_1>
+                                                <label>Ignore</label>
+                                                <uri>#</uri>
+                                                <active>1</active>
+                                            </page_2_3_2_2_1>
+                                        </pages>
+                                    </page2_3_2_2>
+ 
+                            </pages>
+                        </page2_3_2>
+ 
+                        <page2_3_3>
+                            <label>Page 2.3.3</label>
+                            <uri>page2/page2_3/page2_3_3</uri>
+                            <resource>admin</resource>
+                            <pages>
+ 
+                                    <page2_3_3_1>
+                                        <label>Page 2.3.3.1</label>
+                                        <uri>page2/page2_3/page2_3_3/1</uri>
+                                        <active>1</active>
+                                    </page2_3_3_1>
+ 
+                                    <page2_3_3_2>
+                                        <label>Page 2.3.3.2</label>
+                                        <uri>page2/page2_3/page2_3_3/2</uri>
+                                        <resource>guest</resource>
+                                        <active>1</active>
+                                    </page2_3_3_2>
+ 
+                            </pages>
+                        </page2_3_3>
+                    </pages>
+                </page2_3>
+            </pages>
+        </cadastros>
+        <transacoes>
+            <label>Transações</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                    <active>1</active>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                    <active>1</active>
+                </page5>
+            </pages>
+        </transacoes>
+        <estoque>
+            <label>Estoque</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+                <page8>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page8>
+                <page9>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page9>
+                <page10>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page10>
+            </pages>
+        </estoque>
+        <fiscal>
+            <label>Fiscal</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+            </pages>
+        </fiscal>
+        <relatorios>
+            <label>Relatórios</label>
+            <uri>#</uri>
+        </relatorios>
+        <integracoes>
+            <label>Integrações</label>
+            <uri>#</uri>
+        </integracoes>
+        <recursos_humanos>
+            <label>Recursos Humanos</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+            </pages>
+        </recursos_humanos>
+        <producao>
+            <label>Produção</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+            </pages>
+        </producao>
+        <modulos>
+            <label>Módulos</label>
+            <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+            <pages>
+                <page4>
+                    <label>Page 2.3.3.2</label>
+                    <uri>#</uri>
+                    
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+            </pages>
+                </page4>
+                <page5>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page5>
+                <page6>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page6>
+                <page7>
+                    <label>Page 2.3.3.2</label>
+                    <uri>page2/page2_3/page2_3_3/2</uri>
+                </page7>
+            </pages>
+        </modulos>
+        <configuracoes>
+            <label>Configurações</label>
+            <uri>#</uri>
+        </configuracoes>
+    </nav>
+</configdata>

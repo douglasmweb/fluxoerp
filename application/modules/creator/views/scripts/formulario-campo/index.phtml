@@ -1,0 +1,39 @@
+<?=$this->titulo?>
+<?=$this->adicionar?>
+<table class="TabelaLista">
+    <tr>
+        <th>#</th>
+        <th>T&iacute;tulo</th>
+        <th>Campo</th>
+        <th>Formulario</th>
+        <th>A&ccedil;&otilde;es</th>
+    </tr>
+    <? foreach($this->dados as $k => $v): ?>
+    <tr>
+        <td class="primary_key"><?=$v->id?></td>
+        <td><?=$v->titulo?></td>
+        <td><?=$v->campo?></td>
+        <td><?=$v->findParentRow('Creator_Model_Formulario','Formulario')->titulo?></td>
+        <td class="actions">
+            <a href="<?=$this->url(array(
+                'module'=>'creator',
+                'controller'=>'formulario-campo',
+                'action'=>'ver',
+                'id'=>$v->id
+            ));?>" class="button ver" title="Visualizar"></a>
+            <a href="<?=$this->url(array(
+                'module'=>'creator',
+                'controller'=>'formulario-campo',
+                'action'=>'editar',
+                'id'=>$v->id
+            ));?>" class="button edt" title="Editar"></a>
+            <a href="<?=$this->url(array(
+                'module'=>'creator',
+                'controller'=>'formulario-campo',
+                'action'=>'deletar',
+                'id'=>$v->id
+            ));?>" class="button del" title="Deletar"></a>
+        </td>
+    </tr>
+    <? endforeach; ?>
+</table>
