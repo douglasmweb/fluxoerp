@@ -2,18 +2,24 @@
 <?=$this->adicionar?>
 <table class="TabelaLista">
     <tr>
-        <th>#</th>
-        <th>T&iacute;tulo</th>
-        <th>Tabela</th>
-        <th>Módulo</th>
+        <? foreach($this->colunas as $k => $v): ?>
+            <th><?=$k?></th>
+        <? endforeach; ?>
         <th>A&ccedil;&otilde;es</th>
     </tr>
-    <? foreach($this->dados as $k => $v): ?>
+    <?
+
+    if($this->dados)
+    foreach($this->dados as $dado): ?>
     <tr>
-        <td class="primary_key"><?=$v->id?></td>
-        <td><?=$v->titulo?></td>
-        <td><?=$v->tabela?></td>
-        <td><?=$v->findParentRow('Creator_Model_Modulo','Modulo')->titulo?></td>
+        <?
+
+        $x = 0;
+        foreach($this->colunas as $k => $v): ?>
+        <td <?=($x == 0)?'class="primary_key"':'';?>><?=$dado->$v?></td>
+        <?
+        $x++;
+        endforeach; ?>
         <td class="actions">
             <a href="<?=$this->url(array(
                 'module'=>'creator',

@@ -24,7 +24,7 @@ class Creator_ControladorController extends Zend_Controller_Action
         $dados = $this->_model->fetchAll();
         $this->view->dados = $dados;
     }
-    
+
     public function sincronizarAction()
     {
         $id = $this->_request->getParam('id');
@@ -46,11 +46,27 @@ class Creator_ControladorController extends Zend_Controller_Action
                         $data[$v] = $this->_request->getParam($v);
                 endforeach;
 
-                $modulos = new Manager_Engine_Controlador($data['tabela'], $data['modulo']);
+                $Form = new Manager_Engine_Form($data['tabela'], $data['modulo']);
+                $Form->criar();
+
                 try
                 {
-                    $modulos->criar();
-                    $this->_model->insert($data);
+                    $controlador = new Manager_Engine_Controlador($data['tabela'], $data['modulo']);
+                    $controlador->criar();
+                    
+                    $id = $this->_model->insert($data);
+
+                    $ArrayForm = array(
+                        'titulo' => $data['titulo'],
+                        'tabela' => $data['titulo'],
+                        'classe_extendida' => 'Zend_Form',
+                        'controlador' => $id,
+                        'principal' => 1,
+                        'criado_em' => date('Y-m-d G:i:s'));
+
+                    $ObjFormModel = new Creator_Model_Formulario();
+                    $ObjFormModel->insert($ArrayForm);
+
                     $this->view->message = "O registro foi inserido.";
                     $this->_forward('index');
                 }
@@ -81,10 +97,10 @@ class Creator_ControladorController extends Zend_Controller_Action
             {
                 $data = array();
                 foreach ($this->_model->info('cols') as $k => $v):
-                    if ($this->_request->getParam($v))
+                    if ($this->_request->getParam($v) !== null)
                         $data[$v] = $this->_request->getParam($v);
                 endforeach;
-                
+
                 $controlador = new Manager_Engine_Controlador($data['tabela'], $data['modulo']);
                 try
                 {
@@ -127,12 +143,12 @@ class Creator_ControladorController extends Zend_Controller_Action
         }
 
     }
-    
+
     public function controladorAction()
     {
         $result = $this->_model->fetchAll();
-        $db = $result->getTable()->select()->from('creator_controlador',array("
-        CONCAT_WS(' - ',titulo,tabela,(SELECT cm.titulo FROM creator_modulo as cm WHERE cm.id = creator_controlador.modulo)) as identificacao","*"));
+        $db = $result->getTable()->select()->from('creator_controlador', array("
+        CONCAT_WS(' - ',titulo,tabela,(SELECT cm.titulo FROM creator_modulo as cm WHERE cm.id = creator_controlador.modulo)) as identificacao", "*"));
         $table = $db->query()->fetchAll();
         $data = new Zend_Dojo_Data('id', $table);
         $this->_helper->autoCompleteDojo($data);

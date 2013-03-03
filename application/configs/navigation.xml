@@ -10,6 +10,13 @@
           <action>index</action>
           <uri>#</uri>
         </index>
+        <categoria>
+          <label>Categorias</label>
+          <module>cadastros</module>
+          <controller>categoria</controller>
+          <action>index</action>
+          <uri>#</uri>
+        </categoria>
       </pages>
       <label>Cadastros</label>
       <uri>#</uri>

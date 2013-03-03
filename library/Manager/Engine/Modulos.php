@@ -21,6 +21,14 @@ class Manager_Engine_Modulos extends Manager_File
                 mkdir($this->getModulePath() . '/' . '/views/filters', 0777);
                 mkdir($this->getModulePath() . '/' . '/views/helpers', 0777);
                 mkdir($this->getModulePath() . '/' . '/views/scripts', 0777);
+                
+                $Classe = new Zend_CodeGenerator_Php_Class();
+                $Classe->setName(ucfirst($this->getModulo()) . '_Bootstrap');
+                $Classe->setExtendedClass('Zend_Application_Module_Bootstrap');
+                $Nova = new Zend_CodeGenerator_Php_File();
+                $Nova->setClass($Classe);
+                $transfer = file_put_contents($this->getModulePath() . '/Bootstrap.php', $Nova->generate());
+                
                 //rmdir($this->getModulePath());
                 $controlador = new Manager_Engine_Controlador("index",$this->getModulo());
                 $controlador->criar(true);

@@ -6,7 +6,7 @@ class Core_Plugin_ControlNavigation extends Zend_Controller_Plugin_Abstract
         $module = $request->getModuleName();
         $path = null;
 
-        if ($module != "default")
+        if ($module != "default" && $module == "creator")
             $path = APPLICATION_PATH . "/modules/{$module}/configs/navigation.xml";
         else
             $path = APPLICATION_PATH . "/configs/navigation.xml";

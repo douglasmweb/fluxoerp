@@ -1,0 +1,47 @@
+<?=$this->titulo?>
+<?=$this->adicionar?>
+<table class="TabelaLista">
+    <tr>
+        <? foreach($this->colunas as $k => $v): ?>
+            <th><?=$k?></th>
+        <? endforeach; ?>
+        <th>A&ccedil;&otilde;es</th>
+    </tr>
+    <?
+    $pk = current($this->dados->getTable()->info('primary'));
+    if($this->dados)
+    foreach($this->dados as $dado): ?>
+    <tr>
+        <?
+        $x = 0;
+        foreach($this->col_cell as $v): 
+        $campo = $v->campo;
+        
+        if($v->tipo == 'TEXT'){
+        $resultado = substr($dado->$campo,0,100);
+        } else {
+        $resultado = $dado->$campo;    
+        }
+        
+        ?>
+        <td <?=($v == $pk)?'class="primary_key"':'';?>><?=$resultado?></td>
+        <?
+        $x++;
+        endforeach; ?>
+        <td class="actions">
+            <a href="<?=$this->url(array(
+                'action'=>'ver',
+                'id'=>$dado->$pk
+            ));?>" class="button ver"></a>
+            <a href="<?=$this->url(array(
+                'action'=>'editar',
+                'id'=>$dado->$pk
+            ));?>" class="button edt"></a>
+            <a href="<?=$this->url(array(
+                'action'=>'deletar',
+                'id'=>$dado->$pk
+            ));?>" class="button del"></a>
+        </td>
+    </tr>
+    <? endforeach; ?>
+</table>

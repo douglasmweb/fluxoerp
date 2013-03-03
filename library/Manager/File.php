@@ -113,24 +113,24 @@ class Manager_File
     {
         return $this->getModuloName() . "Form_" . $this->getControllerName();
     }
-    
+
     protected function setFormulario($value)
     {
         $this->_formulario = $value;
         return $this;
     }
-    
+
     protected function getFormulario()
     {
         return $this->_formulario;
     }
-    
+
     protected function setCampos($value)
     {
         $this->_campos = $value;
         return $this;
     }
-    
+
     protected function getCampos()
     {
         return $this->_campos;
@@ -156,11 +156,10 @@ class Manager_File
     public function getModuloName()
     {
         $retorno = "";
-        if($this->_modulo == "" or $this->_modulo == "default")
+        if ($this->_modulo == "" or $this->_modulo == "default")
         {
             $retorno = "";
-        }
-        else
+        } else
         {
             $retorno = ucfirst($this->_modulo) . "_";
         }
